@@ -3,7 +3,7 @@ config:
   # The bind address to listen for Minecraft client connections.
   bind: 0.0.0.0:25565
   # Whether to use the proxy in online (authenticate players with Mojang API) or offline mode (not recommended).
-  onlineMode: true
+  onlineMode: false
   # Registers servers with the proxy by giving the address of backend server a custom reference name.
   servers:
     # Server name: server address
@@ -54,7 +54,7 @@ config:
   # Should the proxy enforce the new public key
   # security standard added in Minecraft 1.19?
   # Default: true
-  forceKeyAuthentication: true
+  forceKeyAuthentication: false
   # The default disconnect reason to kick player on proxy shutdown when no other reason was given.
   # Either in simple legacy '§' format or modern text component '{"text":"...", ...}' json.
   shutdownReason: |
@@ -341,7 +341,7 @@ config:
         force-resource-packs: true
         # Enable proxy connections for resource pack downloads
         # Default: false
-        enable-proxy-connections: false
+        enable-proxy-connections: true
 
         # Floodgate settings (authentication for offline Bedrock players)
         # Custom Floodgate key file path (overrides floodgateKeyPath above)
