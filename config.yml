@@ -3,7 +3,7 @@ config:
   # The bind address to listen for Minecraft client connections.
   bind: 0.0.0.0:25565
   # Whether to use the proxy in online (authenticate players with Mojang API) or offline mode (not recommended).
-  onlineMode: true
+  onlineMode: false
   # Registers servers with the proxy by giving the address of backend server a custom reference name.
   servers:
     # Server name: server address
@@ -96,7 +96,7 @@ config:
     #bungeeGuardSecret: secret_here
   # Proxy protocol (HA-Proxy) determines whether Gate should support proxy protocol for players.
   # Do not enable this if you don't know what it is.
-  proxyProtocol: false
+  proxyProtocol: true
   # ForcedHosts routes players to specific servers based on the hostname they connect with.
   # This allows you to have multiple domains pointing to the same Gate proxy but route players
   # to different servers based on which domain they used to connect.
@@ -341,7 +341,7 @@ config:
         force-resource-packs: true
         # Enable proxy connections for resource pack downloads
         # Default: false
-        enable-proxy-connections: false
+        enable-proxy-connections: true
 
         # Floodgate settings (authentication for offline Bedrock players)
         # Custom Floodgate key file path (overrides floodgateKeyPath above)
